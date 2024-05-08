@@ -1,0 +1,9 @@
+<h1> Index of Restaurants </h1>
+
+<%= link_to "Create a new restaurant", new_restaurant_path, class: 'text-dark' %>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li> <%= link_to restaurant.name, restaurant_path(restaurant) %> </li>
+<% end %>
+</ul>
